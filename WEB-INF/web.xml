@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app id="APMPrototype" version="2.4"
+	xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+	<display-name>APM Prototype</display-name>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+	</welcome-file-list>
+	<servlet>
+		<servlet-name>appData</servlet-name>
+		<servlet-class>com.dell.prototype.apm.server.AppServerMonitorDataSubmissionServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>appData</servlet-name>
+		<url-pattern>/appData</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>browserData</servlet-name>
+		<servlet-class>com.dell.prototype.apm.server.BrowserDataSubmissionServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>browserData</servlet-name>
+		<url-pattern>/browserData</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>query</servlet-name>
+		<servlet-class>com.dell.prototype.apm.server.PerformanceDataQueryServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>query</servlet-name>
+		<url-pattern>/query</url-pattern>
+	</servlet-mapping>
+</web-app>
