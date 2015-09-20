@@ -10,7 +10,11 @@
 
 	<property name="name" value="apm" />
 
-	<target name="init">
+	<target name="clean" description="Clean output directories">
+		<delete dir="${build.dir}"/>
+	</target>
+
+	<target name="init" depends="clean">
 		<mkdir dir="${build.classes.web.dir}" />
 		<mkdir dir="${build.classes.inst.dir}" />
 		<mkdir dir="${build.dist}" />
@@ -63,16 +67,12 @@
 			<fileset dir="${build.classes.inst.dir}" />
 			<zipgroupfileset dir="${basedir}/ins_lib" includes="*.jar"/>
 			<manifest>
-				<attribute name="Premain-Class" value="com.dell.prototype.apm.instrumentation.Premain" />
+				<attribute name="Premain-Class" value="lab.sysu.prototype.apm.instrumentation.Premain" />
 				<attribute name="Boot-Class-Path" value="commons-codec-1.6.jar; commons-logging-1.1.3.jar; httpcore-4.3.2.jar; httpclient.jar; gson-2.3.jar; javassist.jar" />	
 			</manifest>
 		</jar>
 	</target>
 
 	<target name="dist" depends="war,instrumentation">
-	</target>
-
-	<target name="clean" description="Clean output directories">
-		<delete dir="${build.dir}"/>
 	</target>
 </project>

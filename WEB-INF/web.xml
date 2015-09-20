@@ -8,7 +8,7 @@
 	</welcome-file-list>
 	<servlet>
 		<servlet-name>appData</servlet-name>
-		<servlet-class>com.dell.prototype.apm.server.AppServerMonitorDataSubmissionServlet</servlet-class>
+		<servlet-class>lab.sysu.prototype.apm.server.AppServerMonitorDataSubmissionServlet</servlet-class>
 		<load-on-startup>1</load-on-startup>
 	</servlet>
 	<servlet-mapping>
@@ -18,7 +18,7 @@
 	
 	<servlet>
 		<servlet-name>browserData</servlet-name>
-		<servlet-class>com.dell.prototype.apm.server.BrowserDataSubmissionServlet</servlet-class>
+		<servlet-class>lab.sysu.prototype.apm.server.BrowserDataSubmissionServlet</servlet-class>
 		<load-on-startup>1</load-on-startup>
 	</servlet>
 	<servlet-mapping>
@@ -28,7 +28,7 @@
 	
 	<servlet>
 		<servlet-name>query</servlet-name>
-		<servlet-class>com.dell.prototype.apm.server.PerformanceDataQueryServlet</servlet-class>
+		<servlet-class>lab.sysu.prototype.apm.server.PerformanceDataQueryServlet</servlet-class>
 		<load-on-startup>1</load-on-startup>
 	</servlet>
 	<servlet-mapping>
